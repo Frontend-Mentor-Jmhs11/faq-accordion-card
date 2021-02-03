@@ -1,0 +1,23 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	/*1rem = 10px*/
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	background: hsl(273, 60%, 41%);
+	background: -moz-linear-gradient(top, hsl(273, 60%, 41%) 0%, hsl(240, 57%, 41%) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, hsl(273, 60%, 41%)), color-stop(100%, hsl(240, 57%, 41%)));
+	background: -webkit-linear-gradient(top, hsl(273, 60%, 41%) 0%, hsl(240, 57%, 41%) 100%);
+	background: -o-linear-gradient(top, hsl(273, 60%, 41%) 0%, hsl(240, 57%, 41%) 100%);
+	background: -ms-linear-gradient(top, hsl(273, 60%, 41%) 0%, hsl(240, 57%, 41%) 100%);
+	background: linear-gradient(to bottom, hsl(273, 60%, 41%) 0%, hsl(240, 57%, 41%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6f2aa8', endColorstr='#2d2da6', GradientType=0 );
+    height: 100vh;
+}
