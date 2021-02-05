@@ -1,70 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+		<title>Frontend Mentor | FAQ Accordion Card</title>
 
-    <title>Frontend Mentor | FAQ Accordion Card</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-
-<body>
-    <!-- En este ejercicio es necesario utilizar grid para que sea mas sencillo -->
-
-    <!-- 	mobile breakpoint: 375px
+	<body>
+		<!-- 	mobile breakpoint: 375px
 			desktop breakpoint: 1440px -->
+        <div class="container">
+			<picture>
+				<source srcset="images/illustration-woman-online-mobile.svg" media="(max-width: 375px)">
+				<source srcset="images/illustration-woman-online-desktop.svg">
+				<img class="image" srcset="images/illustration-woman-online-desktop.svg" alt="My default image">
+			</picture>
+	
+			<picture>
+				<source srcset="images/bg-pattern-mobile.svg" media="(max-width: 375px)">
+				<source srcset="images/bg-pattern-desktop.svg">
+				<img class="image__shadow" srcset="images/bg-pattern-desktop.svg" alt="My default image">
+			</picture>
+	
+			<img class="image__box" src="images/illustration-box-desktop.svg" alt="Caja">
+			
+			<div class="card">
+				<h2 class="card__title">FAQ</h2>
+				<div class="card__item">
+					<h3 class="item__title" onclick="toogleItem(0)">How many team members can I invite?</h3>
+					<img class="item__image" src="images/icon-arrow-down.svg" alt="Arrow Dropdown" />
+					<p class="item__description">
+						You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
+					</p>
+					<hr />
+				</div>
+				<div class="card__item">
+					<h3 class="item__title" onclick="toogleItem(1)">What is the maximum file upload size?</h3>
+					<img class="item__image" src="images/icon-arrow-down.svg" alt="Arrow Dropdown" />
+					<p class="item__description">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+					<hr />
+				</div>
+				<div class="card__item">
+					<h3 class="item__title" onclick="toogleItem(2)">How do I reset my password?</h3>
+					<img class="item__image" src="images/icon-arrow-down.svg" alt="Arrow Dropdown" />
+					<p class="item__description">
+						Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to
+						you.
+					</p>
+					<hr />
+				</div>
+				<div class="card__item">
+					<h3 class="item__title" onclick="toogleItem(3)">Can I cancel my subscription?</h3>
+					<img class="item__image" src="images/icon-arrow-down.svg" alt="Arrow Dropdown" />
+					<p class="item__description">Yes! Send us a message and we’ll process your request no questions asked.</p>
+					<hr />
+				</div>
+				<div class="card__item">
+					<h3 class="item__title" onclick="toogleItem(4)">Do you provide additional support?</h3>
+					<img class="item__image" src="images/icon-arrow-down.svg" alt="Arrow Dropdown" />
+					<p class="item__description">
+						Chat and email support is available 24/7. Phone lines are open during normal business hours.
+					</p>
+					<hr />
+				</div>
+			</div>
+		</div>
 
-    <img class="image" src="images/illustration-woman-online-mobile.svg" alt="Woman Online">
-    <img class="image__shadow" src="images/bg-pattern-mobile.svg" alt="Woman Online Shadow">
-    <div class="card">
+		<div class="attribution">
+			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+			<a href="#">Jose Maria Herrero</a>.
+		</div>
 
-        <h2 class="card__title">FAQ</h2>
-        <div class="card__item">
-            <h3 class="item__title" onclick="toogleItem(0)">How many team members can I invite?</h3>
-            <img class="item__image" src="images/icon-arrow-down.svg" alt="Arrow Dropdown">
-            <p class="item__description">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
-            <hr>
-        </div>
-        <div class="card__item">
-            <h3 class="item__title" onclick="toogleItem(1)">What is the maximum file upload size?</h3>
-            <img class="item__image" src="images/icon-arrow-down.svg" alt="Arrow Dropdown">
-            <p class="item__description">No more than 2GB. All files in your account must fit your allotted storage space.</p>
-            <hr>
-        </div>
-        <div class="card__item">
-            <h3 class="item__title" onclick="toogleItem(2)">How do I reset my password?</h3>
-            <img class="item__image" src="images/icon-arrow-down.svg" alt="Arrow Dropdown">
-            <p class="item__description">Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
-            <hr>
-        </div>
-        <div class="card__item">
-            <h3 class="item__title" onclick="toogleItem(3)">Can I cancel my subscription?</h3>
-            <img class="item__image" src="images/icon-arrow-down.svg" alt="Arrow Dropdown">
-            <p class="item__description">Yes! Send us a message and we’ll process your request no questions asked.</p>
-            <hr>
-        </div>
-        <div class="card__item">
-            <h3 class="item__title" onclick="toogleItem(4)">Do you provide additional support?</h3>
-            <img class="item__image" src="images/icon-arrow-down.svg" alt="Arrow Dropdown">
-            <p class="item__description">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
-            <hr>
-        </div>
-    </div>
-
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Jose Maria Herrero</a>.
-    </div>
-
-    <script src="js/main.js"></script>
-</body>
-
+		<script src="js/main.js"></script>
+	</body>
 </html>

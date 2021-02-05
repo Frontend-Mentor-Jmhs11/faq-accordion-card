@@ -10,6 +10,10 @@ html {
     box-sizing: inherit;
 }
 
+img{
+    max-width: 100%;
+}
+
 hr {
     display: block;
     height: 1px;
@@ -37,34 +41,31 @@ body {
     align-items: center;
 }
 
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.image__box{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .image__box{
+        display: inline-block;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
+
 .card {
     padding: 10rem 0 3rem;
     background-color: white;
     width: 90%;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
-}
-
-.image-container {
-    position: relative;
-}
-
-.image,
-.image__shadow {
-    position: absolute;
-    top: 16%;
     margin: 0 auto;
-    margin-left: -4%;
-}
-
-.image {
-    z-index: 1;
-}
-
-.image__shadow {
-    top: 27%;
-    left: 21%;
-    z-index: 0;
 }
 
 .card__title {
@@ -100,12 +101,8 @@ body {
 }
 
 @media (min-width: 375px) {
-    .image {
-        left: 5%;
-    }
-    .image__shadow {
-        top: 0;
-        left: 0;
+    .image, .image__shadow {
+        display: none;
     }
 }
 
