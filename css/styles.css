@@ -1,23 +1,114 @@
 html {
-	box-sizing: border-box;
-	font-size: 62.5%;
-	/*1rem = 10px*/
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*1rem = 10px*/
 }
 
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid hsl(240, 5%, 91%);
+    margin: 1em 0;
+    padding: 0;
 }
 
 body {
-	background: hsl(273, 60%, 41%);
-	background: -moz-linear-gradient(top, hsl(273, 60%, 41%) 0%, hsl(240, 57%, 41%) 100%);
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, hsl(273, 60%, 41%)), color-stop(100%, hsl(240, 57%, 41%)));
-	background: -webkit-linear-gradient(top, hsl(273, 60%, 41%) 0%, hsl(240, 57%, 41%) 100%);
-	background: -o-linear-gradient(top, hsl(273, 60%, 41%) 0%, hsl(240, 57%, 41%) 100%);
-	background: -ms-linear-gradient(top, hsl(273, 60%, 41%) 0%, hsl(240, 57%, 41%) 100%);
-	background: linear-gradient(to bottom, hsl(273, 60%, 41%) 0%, hsl(240, 57%, 41%) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6f2aa8', endColorstr='#2d2da6', GradientType=0 );
+    background: hsl(273, 60%, 41%);
+    background: -moz-linear-gradient(top, hsl(273, 60%, 41%) 0%, hsl(240, 57%, 41%) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, hsl(273, 60%, 41%)), color-stop(100%, hsl(240, 57%, 41%)));
+    background: -webkit-linear-gradient(top, hsl(273, 60%, 41%) 0%, hsl(240, 57%, 41%) 100%);
+    background: -o-linear-gradient(top, hsl(273, 60%, 41%) 0%, hsl(240, 57%, 41%) 100%);
+    background: -ms-linear-gradient(top, hsl(273, 60%, 41%) 0%, hsl(240, 57%, 41%) 100%);
+    background: linear-gradient(to bottom, hsl(273, 60%, 41%) 0%, hsl(240, 57%, 41%) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#6f2aa8', endColorstr='#2d2da6', GradientType=0);
     height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    padding: 10rem 0 3rem;
+    background-color: white;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image,
+.image__shadow {
+    position: absolute;
+    top: 16%;
+    margin: 0 auto;
+    margin-left: -4%;
+}
+
+.image {
+    z-index: 1;
+}
+
+.image__shadow {
+    top: 27%;
+    left: 21%;
+    z-index: 0;
+}
+
+.card__title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.card__item {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.item__title {
+    font-weight: 400;
+    color: hsl(237, 12%, 33%);
+}
+
+.item__title:active {
+    color: hsl(14, 88%, 65%);
+}
+
+.item__image {
+    position: absolute;
+    top: 4px;
+    right: 0px;
+    transition: all .5s ease-in-out;
+}
+
+.item__description {
+    color: hsl(240, 6%, 50%);
+    display: none;
+}
+
+@media (min-width: 375px) {
+    .image {
+        left: 5%;
+    }
+    .image__shadow {
+        top: 0;
+        left: 0;
+    }
+}
+
+.attribution {
+    display: none;
 }
